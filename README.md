@@ -6,6 +6,8 @@
 😎 What am i doing?
 
 0624 : add SEO, reset.css, html5shiv.js, prefixfree.js, respond.js...
+<br>
+0629 : add javascript at community
 
 <br><br><br>
 
