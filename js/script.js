@@ -159,6 +159,63 @@ $(document).ready(function () {
     dataNewsOutput += temp;
   }
   dataNewsDiv.html(dataNewsOutput)
+
+  // 활동 갤러리
+  let galleryData = [
+    {
+      link: '#1',
+      desc: '3월 인문학 특강 [우리 삶에 철학이 필요한 이유',
+      img: '../images/tmb_data_file_52_20211214112755_0.jpg',
+      date: '2022-06-29'
+    },
+    {
+      link: '#2',
+      desc: '12월 문화특강 주간 ♡ 크리스마스 입욕제 만들기',
+      img: '../images/tmb_data_file_53_20211214112958_0.jpg',
+      date: '2021-12-14'
+    },
+    {
+      link: '#3',
+      desc: '12월 문화특강 주간 ♡ 플레이팅 도마 만들기',
+      img: '../images/tmb_data_file_55_20220404113553_0.jpg',
+      date: '2021-12-14'
+    },
+  ];
+
+  let dataGalleryDiv = $('.data-gallery');
+  let dataGalleryResult = ''
+  for (let i = 0; i < galleryData.length; i++) {
+    let data = galleryData[i];
+    let temp = `
+    <li>
+    <a href='${data.link}'></a>
+    <img src='${data.img}'></img>
+    <p>${data.desc}</p>
+    <span>${data.date}</span>
+    </li>
+    `;
+    dataGalleryResult += temp;
+  }
+  dataGalleryDiv.html(dataGalleryResult);
+
+
+  // 동영상 갤러리
+  let videoGallery = [
+    {
+      video : "https://www.youtube.com/embed/0-q1KafFCLU"  
+    }
+  ]
+  let dataVideoGalleryDiv = $('.gallery-more');
+  let dataVideoGalleryResult = '';
+  for (let i = 0; i < videoGallery.length; i++) {
+    let data = dataVideoGalleryDiv[i];
+    let temp = `
+    <iframe src='${data.video}'></iframe>
+    `
+    dataVideoGalleryResult += temp;
+  }
+  dataVideoGalleryDiv.html(dataVideoGalleryResult);
+
 });
 
 

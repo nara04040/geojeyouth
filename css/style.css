@@ -1125,17 +1125,17 @@ body {
 }
 
 .gallery-1 {
-  background: url(../images/tmb_data_file_52_20211214112755_0.jpg) no-repeat center;
+  background: url('../images/tmb_data_file_52_20211214112755_0.jpg') no-repeat center;
   background-size: cover;
 }
 
 .gallery-2 {
-  background: url(../images/tmb_data_file_53_20211214112958_0.jpg) no-repeat center;
+  background: url('../images/tmb_data_file_53_20211214112958_0.jpg') no-repeat center;
   background-size: cover;
 }
 
 .gallery-3 {
-  background: url(../images/tmb_data_file_55_20220404113553_0.jpg) no-repeat center;
+  background: url('../images/tmb_data_file_55_20220404113553_0.jpg') no-repeat center;
   background-size: cover;
 }
 
