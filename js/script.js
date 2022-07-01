@@ -123,8 +123,7 @@ $(document).ready(function () {
   communityList.html(communityOutput);
 
   // 청년정책 새소식  : 객체  {} 구현 
-  let newsData = [
-    {
+  let newsData = [{
       link: '#1',
       title: '2022 경남 청년 라이브커머스 아카데미 참가자 모집 공고',
       date: '2022.06.27'
@@ -147,7 +146,7 @@ $(document).ready(function () {
   ];
   let dataNewsDiv = $('.data-news');
   let dataNewsOutput = '';
-  for(let i = 0; i < newsData.length; i++) {
+  for (let i = 0; i < newsData.length; i++) {
     //데이터를 한개씩 가져와 뜯는다
     let data = newsData[i];
     let temp = `
@@ -161,60 +160,64 @@ $(document).ready(function () {
   dataNewsDiv.html(dataNewsOutput)
 
   // 활동 갤러리
-  let galleryData = [
-    {
-      link: '#1',
-      desc: '3월 인문학 특강 [우리 삶에 철학이 필요한 이유',
-      img: '../images/tmb_data_file_52_20211214112755_0.jpg',
-      date: '2022-06-29'
-    },
-    {
-      link: '#2',
-      desc: '12월 문화특강 주간 ♡ 크리스마스 입욕제 만들기',
-      img: '../images/tmb_data_file_53_20211214112958_0.jpg',
-      date: '2021-12-14'
-    },
-    {
-      link: '#3',
-      desc: '12월 문화특강 주간 ♡ 플레이팅 도마 만들기',
-      img: '../images/tmb_data_file_55_20220404113553_0.jpg',
-      date: '2021-12-14'
-    },
-  ];
 
-  let dataGalleryDiv = $('.data-gallery');
-  let dataGalleryResult = ''
-  for (let i = 0; i < galleryData.length; i++) {
-    let data = galleryData[i];
-    let temp = `
-    <li>
-    <a href='${data.link}'></a>
-    <img src='${data.img}'></img>
-    <p>${data.desc}</p>
-    <span>${data.date}</span>
-    </li>
-    `;
-    dataGalleryResult += temp;
-  }
-  dataGalleryDiv.html(dataGalleryResult);
+  // let galleryData = [{
+  //     link: '#1',
+  //     desc: '3월 인문학 특강 [우리 삶에 철학이 필요한 이유',
+  //     img: '../images/tmb_data_file_52_20211214112755_0.jpg',
+  //     date: '2022-06-29'
+  //   },
+  //   {
+  //     link: '#2',
+  //     desc: '12월 문화특강 주간 ♡ 크리스마스 입욕제 만들기',
+  //     img: '../images/tmb_data_file_53_20211214112958_0.jpg',
+  //     date: '2021-12-14'
+  //   },
+  //   {
+  //     link: '#3',
+  //     desc: '12월 문화특강 주간 ♡ 플레이팅 도마 만들기',
+  //     img: '../images/tmb_data_file_55_20220404113553_0.jpg',
+  //     date: '2021-12-14'
+  //   },
+  // ];
+
+  // let dataGalleryDiv = $('.data-gallery');
+  // let dataGalleryResult = ''
+  // for (let i = 0; i < galleryData.length; i++) {
+  //   let data = galleryData[i];
+  //   let temp = `
+  //   <li>
+  //   <a href='${data.link}'>
+  //     <img src='${data.img} alt=''></img>
+  //    <p>
+  //     <span>${data.desc}</span>
+  //     <span>${data.date}</span>
+  //     </p>
+  //   </a>
+  //   </li>
+  //   `;
+  //   dataGalleryResult += temp;
+  // }
+  // dataGalleryDiv.html(dataGalleryResult); 
+
 
 
   // 동영상 갤러리
-  let videoGallery = [
-    {
-      video : "https://www.youtube.com/embed/0-q1KafFCLU"  
-    }
-  ]
-  let dataVideoGalleryDiv = $('.gallery-more');
-  let dataVideoGalleryResult = '';
-  for (let i = 0; i < videoGallery.length; i++) {
-    let data = dataVideoGalleryDiv[i];
-    let temp = `
-    <iframe src='${data.video}'></iframe>
-    `
-    dataVideoGalleryResult += temp;
-  }
-  dataVideoGalleryDiv.html(dataVideoGalleryResult);
+
+  // let videoGallery = [{
+  //   video: "https://www.youtube.com/embed/0-q1KafFCLU"
+  // }]
+  // let dataVideoGalleryDiv = $('.gallery-more');
+  // let dataVideoGalleryResult = '';
+  // for (let i = 0; i < videoGallery.length; i++) {
+  //   let data = dataVideoGalleryDiv[i];
+  //   let temp = `
+  //   <iframe src='${data.video}'></iframe>
+  //   `
+  //   dataVideoGalleryResult += temp;
+  // }
+  // dataVideoGalleryDiv.html(dataVideoGalleryResult);
+
 
 });
 
@@ -310,4 +313,55 @@ window.onload = function () {
 
   });
 
+  // 활동갤러리
+  // 자료를 전달하면 활동 갤러리 목록에 
+  // 특정장소에 출력한다. (link, pic, date, title) function(){}이용하기
+  // 출력할 데이터 모음
+  let galleryData = [{
+      link: '#',
+      title: '3월 인문학 특강 [우리 삶에 철학이 필요한 이유]',
+      date: '2021-12-14',
+      pic: 'tmb_data_file_52_20211214112755_0.jpg'
+    },
+    {
+      link: '#',
+      title: '12월 문화특강 주간 ♡ 크리스마스 입욕제 만들기',
+      date: '2021-12-14',
+      pic: 'tmb_data_file_53_20211214112958_0.jpg'
+    },
+    {
+      link: '#',
+      title: '12월 문화특강 주간 ♡ 플레이팅 도마 만들기',
+      date: '2021-12-14',
+      pic: 'tmb_data_file_55_20220404113553_0.jpg'
+    }
+  ];
+
+
+  function showGalleryInfo(tag, data) {
+    //대상을 찾아라.
+    let who = $(tag);
+    who.attr('href', data.link);
+    let html = `
+    <span class="gallery-img"></span>
+    <p class="gallery-cont">
+      <span class="gallery-title">
+      ${data.title}
+      </span>
+      <span class="gallery-date">
+      ${data.date}
+      </span>
+    </p>
+    `;
+    //출력을 하자
+    who.html(html)
+    //배경을 넣자 
+    let bg = who.find('.gallery-img')
+    bg.css('background', 'url(images/' + data.pic + ') no-repeat center')
+    bg.css('background-size', 'cover')
+  }
+  showGalleryInfo('#gallery-list-1', galleryData[0]);
+  showGalleryInfo('#gallery-list-2', galleryData[1]);
+  showGalleryInfo('#gallery-list-3', galleryData[2]);
 }
+// M V C (Model view Control)
