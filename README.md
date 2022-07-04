@@ -12,6 +12,8 @@
 0630 : javascript fix and practice.
 <br>
 0701 : javascript이용 data생성및 html로 데이터 뿌려주기
+<br>
+0704 : javascript function사용
 
 <br><br><br>
 

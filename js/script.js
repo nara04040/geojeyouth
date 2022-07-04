@@ -24,7 +24,7 @@ $(document).ready(function () {
     event.stopPropagation()
   })
 
-  // 모바일 메뉴 기능b
+  // 모바일 메뉴 기능
   // .mb-bt 를 저장해서 활용하자.
   $('.mb-bt').click(function (e) {
     e.preventDefault();
@@ -32,6 +32,14 @@ $(document).ready(function () {
     $('.mb-dim').toggleClass('mb-dim-open');
     $('.mb-wrap').toggleClass('mb-wrap-open');
   });
+  //모바일버튼기능초기화
+  function buttonReset() {
+    $('.mb-bt').removeClass('mb-bt-open');
+    $('.mb-dim').removeClass('mb-dim-open');
+    $('.mb-wrap').removeClass('mb-wrap-open');
+    $('.mb-menu>li').height(60);
+    $('.mb-mainmenu').removeClass('mb-mainmenu-open');
+  }
 
   // 화면 사이즈 체크
   $(window).resize(function () {
@@ -40,11 +48,7 @@ $(document).ready(function () {
     // 1000 px 보다 크면
     if (temp > 1000) {
       // 모바일 버튼 기능 초기화
-      $('.mb-bt').removeClass('mb-bt-open');
-      $('.mb-dim').removeClass('mb-dim-open');
-      $('.mb-wrap').removeClass('mb-wrap-open');
-      $('.mb-menu>li').height(60);
-      $('.mb-mainmenu').removeClass('mb-mainmenu-open');
+      buttonReset()
     }
 
   });
@@ -87,11 +91,7 @@ $(document).ready(function () {
   let mb_dim = $('.mb-dim');
   mb_dim.click(function () {
     // 모바일 버튼 기능 초기화
-    $('.mb-bt').removeClass('mb-bt-open');
-    $('.mb-dim').removeClass('mb-dim-open');
-    $('.mb-wrap').removeClass('mb-wrap-open');
-    $('.mb-menu>li').height(60);
-    $('.mb-mainmenu').removeClass('mb-mainmenu-open');
+    buttonReset()
   })
 
   // 커뮤니티 영역 데이터 연동
